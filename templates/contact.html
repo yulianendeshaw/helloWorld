@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 {%  extends "base.html" %}
 {% block page_title %} Contact {% endblock %}
 {% block page_header %} Contact Info: {% endblock %}
-
+</head>
 {% block page_content %}
 
 {% if form_submitted %}
@@ -30,22 +33,22 @@
 <form class="row g-3" action="{{ url_for('contact') }}" method="post">
 <div class="col-md-6">
 
-      <label for="First Name" class="form-label">First Name:</label>
+      <label for="first_name" class="form-label">First Name:</label>
     <input type="text" class="form-control" placeholder="Enter Your First name" aria-label="First name" id=first_name name="first_name">
   </div>
   <div class="col-md-6">
-          <label for="Last Name" class="form-label">Last Name:</label>
+          <label for="last_name" class="form-label">Last Name:</label>
     <input type="text" class="form-control" placeholder="Enter Your Last name" id=last_name aria-label="Last name" name="last_name">
   </div>
  <div class="col-md-6">
-    <label for="Birthday" class="form-label">Birthday: </label>
+    <label for="birthday" class="form-label">Birthday: </label>
     <input type="date" class="form-control" id="birthday" name="birthday">
   </div>
 <div class="col-md-6">
-    <label for="Email" class="form-label">Email:</label>
+    <label for="email" class="form-label">Email:</label>
     <input type="email" class="form-control" placeholder="Enter Your Email Address"  id="email" name="email">
   </div>
-</div>
+
 
  <div class="col-12">
     <button type="submit" class="btn btn-primary">Submit</button>
