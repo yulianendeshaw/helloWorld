@@ -125,16 +125,17 @@ if __name__ == '__main__':
         db.create_all()
 
         # Execute only once! Initial loading of available majors
-        '''
 
- 
-      majors = ['Accounting', 'Finance', 'Information Systems', 'International Business', 'Management', \
+        # Execute only once! Initial loading of available majors
+        '''
+        majors = ['Accounting', 'Finance', 'Information Systems', 'International Business', 'Management', \
                     'Operations Management & Business Analytics', 'Supply Chain Management']
         for each_major in majors:
             print(each_major)
             amajor = Major(major=each_major)
             db.session.add(amajor)
             db.session.commit()
+       
         '''
 
     app.run()
