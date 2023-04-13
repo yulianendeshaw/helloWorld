@@ -212,6 +212,11 @@ def error():
     # Generic error handler to handle various site errors
     # Before routing to this route, ensure flash function is used
     return render_template('error.html')
+@app.route('/training')
+@login_required
+@role_required(['ADMIN','MANAGER'])
+def training():
+    return render_template('training.html')
 
 
 @app.errorhandler(404)
