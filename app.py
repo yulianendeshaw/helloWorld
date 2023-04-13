@@ -74,7 +74,6 @@ def logout():
     flash(f'You have been logged out.', 'success')
     return redirect(url_for('home'))
 
-
 @app.route('/student/view')
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
